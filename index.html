@@ -1,0 +1,684 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity India - Premium Flag Manufacturing</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+   
+  <header class="navbar">
+    <div class="logo">
+      <img src="img/logo.avif" alt="Eureka Logo" />
+      <!-- <h1>Eureka Polychem PVT LTD</h1> -->
+    </div>
+  
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about-us.html">About</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Products &#9662;</a> 
+        <ul class="dropdown-menu" id="dropdownMenu">
+          <li><a href="feather-flag.html">Feather Flag</a></li>
+          <li><a href="teardrop-flag.html">Teardrop Flag</a></li>
+          <li><a href="promotional-flag.html">Promotion Flag</a></li>
+          <li><a href="printed-flag.html">Printed Flag</a></li>
+          <li><a href="beach-flag.html">Beach Flag</a></li>
+        
+        </ul>
+      </li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact-us.html">Contact</a></li>
+    </ul>
+  </header>
+
+
+    <!-- Hero Section -->
+    
+<div class="fusn-bt-hero">
+  <div class="slides">
+    <div class="slide"><img src="img/17.avif" alt="Slide 1"></div>
+    <div class="slide"><img src="img/16.avif" alt="Slide 2"></div>
+    <div class="slide"><img src="img/11.avif" alt="Slide 3"></div>
+  </div>
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+  <div class="dots">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</div>
+
+<style>
+.fusn-bt-hero {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  
+}
+.fusn-bt-hero .slides {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+.fusn-bt-hero .slide {
+  min-width: 100%;
+}
+
+.fusn-bt-hero img {
+  width: 100%;
+  display: block;
+  /* margin-top: 105px; */
+  height: auto; /* Default for mobile */
+}
+
+/* For desktop and larger screens */
+/* @media (min-width: 768px) {
+  .fusn-bt-hero img {
+    height: 670px;
+    object-fit: cover; 
+  }
+} */
+
+.fusn-bt-hero .prev,
+.fusn-bt-hero .next {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  border: none;
+  /* padding: 10px; */
+  cursor: pointer;
+  border-radius: 50%;
+}
+.fusn-bt-hero .prev { left: 10px; }
+.fusn-bt-hero .next { right: 10px; }
+.fusn-bt-hero .dots {
+  text-align: center;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+}
+.fusn-bt-hero .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.fusn-bt-hero .dot.active {
+  background: #fff;
+}
+</style>
+
+<script>
+(function() {
+  const slider = document.querySelector('.fusn-bt-hero');
+  const slides = slider.querySelectorAll('.slide');
+  const dots = slider.querySelectorAll('.dot');
+  const slidesContainer = slider.querySelector('.slides');
+  let currentIndex = 0;
+  let autoSlideInterval;
+
+  function showSlide(index) {
+    if (index >= slides.length) { index = 0; }
+    if (index < 0) { index = slides.length - 1; }
+    slidesContainer.style.transform = 'translateX(' + (-index * 100) + '%)';
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+    currentIndex = index;
+  }
+
+  function startAutoSlide() {
+    clearInterval(autoSlideInterval);
+    autoSlideInterval = setInterval(() => {
+      showSlide(currentIndex + 1);
+    }, 9500);
+  }
+
+  function userSlide(nextIndex) {
+    showSlide(nextIndex);
+    startAutoSlide(); // Reset timer
+  }
+
+  slider.querySelector('.next').addEventListener('click', () => {
+    userSlide(currentIndex + 1);
+  });
+
+  slider.querySelector('.prev').addEventListener('click', () => {
+    userSlide(currentIndex - 1);
+  });
+
+  dots.forEach((dot, idx) => {
+    dot.addEventListener('click', () => userSlide(idx));
+  });
+
+  showSlide(currentIndex);
+  startAutoSlide(); // Start the auto-slide on load
+})();
+</script>
+
+    <!-- Story Section -->
+<section id="about" class="story-section"  >
+        <div class="container">
+            <video autoplay muted loop playsinline class="background-video">
+                <source src="img/untitled-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="background-overlay" ></div>
+            <div class="section-header"  >
+                <h2 class="section-title" style="color: white;">How We Started</h2>
+                <p class="about-additional-text">From a small idea to industry impact</p>
+                <p class="about-additional-text">
+                    The idea here is to enhance visibility and brand presence by combining durable material and colorful designs for aesthetically pleasing flags, few being beach flags, printed flags, promotion flags, feather flags, and teardrop flags.
+                </p>
+                <br>
+                <br>
+                <h3 class="about-objective-title">Our Objective</h3>
+                <p class="about-additional-text">
+                    We are committed to providing brands with visually appealing, durable, and flexible flag products. We do our best to incorporate high-quality manufacturing and creative designs to provide products that help develop successful marketing and advertising campaigns for brands of all types.
+                </p>
+                <br>
+                <h3 class="about-objective-title">Our Goal</h3>
+                <p class="about-additional-text">
+                    We aspire to be the most trusted and creative flag manufacturer and supplier in India, known for breaking new ground in promotional branding tools and helping companies make lasting impressions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Top Categories Section -->
+    <section id="top-categories" class="top-categories-section" style="padding: 4rem 0; background: #f9f9f9;">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 3rem;">
+                <h2 class="section-title" style="color: #B8860B;">Our Top Categories</h2>
+                <p class="section-subtitle" style="color: #666;">Explore our most popular flag categories</p>
+            </div>
+            <div class="categories-grid-neo" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+                <div class="category-card-neo" style="text-align: center; max-width: 180px;">
+                    <img src="img/ntitled-design.png" alt="Custom Flags" class="category-image-neo" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 3px solid #ccc; transition: transform 0.3s ease;">
+                    <h3 style="margin-top: 1rem; font-weight: 600;">Custom Flags</h3>
+                </div>
+                <div class="category-card-neo" style="text-align: center; max-width: 180px;">
+                    <img src="img/Untitled design (3).png" alt="Indoor Flag Poles" class="category-image-neo" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 3px solid #ccc; transition: transform 0.3s ease;">
+                    <h3 style="margin-top: 1rem; font-weight: 600;">Indoor Flag Poles</h3>
+                </div>
+                <div class="category-card-neo" style="text-align: center; max-width: 180px;">
+                    <img src="img/Untitled design (4).png" alt="Fabric Standee" class="category-image-neo" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 3px solid #ccc; transition: transform 0.3s ease;">
+                    <h3 style="margin-top: 1rem; font-weight: 600;">Fabric Standee</h3>
+                </div>
+                <div class="category-card-neo" style="text-align: center; max-width: 180px;">
+                    <img src="img/Untitled design (5).png" alt="Sashe" class="category-image-neo" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 3px solid #ccc; transition: transform 0.3s ease;">
+                    <h3 style="margin-top: 1rem; font-weight: 600;">Sashe</h3>
+                </div>
+                <div class="category-card-neo" style="text-align: center; max-width: 180px;">
+                    <img src="img/Untitled design.png" alt="Sashe" class="category-image-neo" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 3px solid #ccc; transition: transform 0.3s ease;">
+                    <h3 style="margin-top: 1rem; font-weight: 600;">Table Flag</h3>
+                </div>
+                <div class="category-card-neo" style="text-align: center; max-width: 180px;">
+                    <img src="img/Untitled design (1).png" alt="Sashe" class="category-image-neo" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 3px solid #ccc; transition: transform 0.3s ease;">
+                    <h3 style="margin-top: 1rem; font-weight: 600;">Country Flag</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="feather-flag-new-section">
+        <div class="container feather-flag-new-container" style="display: flex; gap: 2rem; align-items: center; padding: 4rem 0;">
+            <div class="feather-flag-image" style="flex: 1; max-width: 400px;">
+                <img src="img/IMG-20250716-WA0006.jpg" alt="Featured Flag" style="width: 100%; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            </div>
+            <div class="feather-flag-content" style="flex: 1; padding-left: 1rem;">
+                <h2 style="font-weight: 700; font-size: 2.5rem; margin-bottom: 1rem;">Feather Flag</h2>
+                <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1rem;">
+                    Elevate your brand visibility with Feather Flags by Infinity India, Designed to capture attention with their dynamic and eye-catching appearance, these feather flags are perfect for outdoor events, trade shows, retail promotions, and more.
+                </p>
+                <div class="rating" style="color: #fbbf24; font-size: 1.2rem; margin-bottom: 1rem;">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span style="color: #666; font-size: 1rem; margin-left: 0.5rem;">(3 Reviews)</span>
+                </div>
+                <button class="btn btn-primary" style="margin-bottom: 1rem;">READ MORE</button>
+            </div>
+        </div>
+    </section>
+
+<section id="products" class="products-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Our Trending Flags</h2>
+            <p class="section-subtitle">Premium quality feather flags for all your promotional needs</p>
+        </div>
+        <div class="products-slider-container">
+            <div class="products-grid" style="text-decoration-color: none;">
+                <a href="#" class="product-card" data-product="feather">
+                    <div class="product-image">
+                        <img src="img/5-1.webp" alt="Feather Flag 1">
+                    </div>
+                    <div class="product-content">
+                        <h3>Custom Table Flags</h3>
+                        <!-- <p>High-quality feather flag with vibrant colors and durable material.</p> -->
+                    </div>
+                </a>
+                <a href="#" class="product-card" data-product="teardrop">
+                    <div class="product-image">
+                        <img src="img/5-2.webp" alt="Feather Flag 2">
+                    </div>
+                    <div class="product-content">
+                        <h3>Sports Flags</h3>
+                        <!-- <p>Weather-resistant feather flag suitable for outdoor promotions.</p> -->
+                    </div>
+                </a>
+                <a href="#" class="product-card" data-product="printed">
+                    <div class="product-image">
+                        <img src="img/5-3.webp" alt="Feather Flag 3">
+                    </div>
+                    <div class="product-content">
+                        <h3>Advertising Flags</h3>
+                        <!-- <p>Customizable feather flag with easy setup and transport.</p> -->
+                    </div>
+                </a>
+
+                <a href="#" class="product-card" data-product="feather">
+                    <div class="product-image">
+                        <img src="img/5-4.webp" alt="Feather Flag 1">
+                    </div>
+                    <div class="product-content">
+                        <h3>Custom Flags</h3>
+                        <!-- <p>High-quality feather flag with vibrant colors and durable material.</p> -->
+                    </div>
+                </a>
+                <a href="#" class="product-card" data-product="teardrop">
+                    <div class="product-image">
+                        <img src="img/5-5.webp" alt="Feather Flag 2">
+                    </div>
+                    <div class="product-content">
+                        <h3>Hand Flags</h3>
+                        <!-- <p>Weather-resistant feather flag suitable for outdoor promotions.</p> -->
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="slider">
+        <h2 style="text-align: center;">Featured Products</h2>
+
+        <div class="slider-inner">
+            <a href="#"><img src="img/5-1.webp"> </a>
+            <a href="#"><img src="img/5-2.webp"> </a>
+            <a href="#"><img src="img/5-3.webp"> </a>
+            <a href="#"><img src="img/5-4.webp"> </a>
+            <a href="#"><img src="img/5-5.webp"> </a>
+            <a href="#"><img src="img/6-1.webp"> </a>
+
+            <!-- duplicate -->
+            <a href="#"><img src="img/5-1.webp"> </a>
+            <a href="#"><img src="img/5-2.webp"> </a>
+            <a href="#"><img src="img/5-3.webp"> </a>
+            <a href="#"><img src="img/5-4.webp"> </a>
+            <a href="#"><img src="img/5-5.webp"> </a>
+            <a href="#"><img src="img/6-1.webp"> </a>
+
+
+        </div>
+    </section>
+
+
+<style>
+    .slider{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin-top: 35px;
+}
+
+.slider-inner{
+  display: flex;
+    width: 230%;
+    animation: slide 35s linear infinite;
+}
+
+.slider:hover .slider-inner{
+  animation-play-state: paused;
+}
+
+@keyframes slide{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-200%);
+  }
+}
+
+.slider-inner img{
+    width: 471px;
+    height: 343px;
+    object-fit: cover;
+    margin: 14px;
+    transition: transform 0.2s;
+}
+
+.slider-inner img:hover{
+  transform: scale(1.1);
+  transition: transform 0.2s;
+  z-index: 1;
+}
+</style>
+
+
+
+
+
+
+<!-- <section class="slider">
+    <h2 style="text-align: center;">Featured Products</h2>
+
+        <div class="slider-inner"> -->
+            <!-- <a href="#"><img src="img/5-1.webp"> </a>
+            <a href="#"><img src="img/5-2.webp"> </a>
+            <a href="#"><img src="img/5-3.webp"> </a>
+            <a href="#"><img src="img/5-4.webp"> </a>
+            <a href="#"><img src="img/5-5.webp"> </a>
+            <a href="#"><img src="img/6-1.webp"> </a> -->
+            <!-- <a href="#"><img src="img/6-2.webp"> </a> -->
+                <!-- <img src="img/Untitled design (2).png" alt="Custom Flags" class="category-image-neo">
+                <h3>CUSTOM FLAGS</h3>
+            </div>
+            <div class="category-card-neo">
+                <img src="img/Untitled design (3).png" alt="Indoor Flag Poles" class="category-image-neo">
+                <h3>INDOOR FLAG POLES</h3>
+            </div>
+            <div class="category-card-neo">
+                <img src="img/Untitled design (4).png" alt="Fabric Standee" class="category-image-neo">
+                <h3>FABRIC STANDEE</h3>
+            </div>
+            <div class="category-card-neo">
+                <img src="img/Untitled design (5).png" alt="Sashe" class="category-image-neo">
+                <h3>SASHE</h3>
+            </div> -->
+        <!-- </div>
+    </div>
+</section> -->
+
+<style>
+    .category-image-neo {
+    width: 150px;          /* You can adjust this as needed */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ccc; /* Optional: adds a border to the circle */
+    transition: transform 0.3s ease;
+}
+
+.category-image-neo:hover {
+    transform: scale(1.05); /* Optional: adds a zoom on hover effect */
+}
+.categories-grid-neo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.category-card-neo {
+    text-align: center;
+}
+
+</style>
+
+
+
+
+
+
+
+    </style>
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Infinity India?</h2>
+                <p class="section-subtitle">Standing ahead with distinctive value</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Custom-Made Solutions</h3>
+                    <p>Each flag is customized according to the customer's needs and specifications, keeping in mind your brand and marketing objectives.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Premium Materials</h3>
+                    <p>We only use premium, weather-resistant textiles and inks for long-lasting prints that maintain their vibrancy.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Building Trust</h3>
+                    <p>Our expertise in international shipping and exporting makes the process dependable and easy, earning trust worldwide.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Quick Response</h3>
+                    <p>Fast turnaround times and efficient delivery ensure your promotional campaigns stay on schedule.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Cost-Effective</h3>
+                    <p>An affordable option for powerful advertising that delivers excellent return on investment.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>International Reach</h3>
+                    <p>Serving clients across India and beyond with reliable international shipping services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section id="industries" class="industries-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Serving Diverse Industry Needs</h2>
+                <p class="section-subtitle">Trusted by businesses across multiple sectors</p>
+            </div>
+            <div class="industries-grid">
+                <div class="industry-item">
+                    <i class="fas fa-store"></i>
+                    <span>Retail & Supermarkets</span>
+                </div>
+                <div class="industry-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Events & Exhibitions</span>
+                </div>
+                <div class="industry-item">
+                    <i class="fas fa-home"></i>
+                    <span>Real Estate</span>
+                </div>
+                <div class="industry-item">
+                    <i class="fas fa-plane"></i>
+                    <span>Tourism & Hospitality</span>
+                </div>
+                <div class="industry-item">
+                    <i class="fas fa-car"></i>
+                    <span>Automotive</span>
+                </div>
+                <div class="industry-item">
+                    <i class="fas fa-football-ball"></i>
+                    <span>Sports & Entertainment</span>
+                </div>
+                <!-- <div class="industry-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Educational Institutions</span>
+                </div> -->
+                <div class="industry-item">
+                    <i class="fas fa-building"></i>
+                    <span>Corporate Branding</span>
+                </div>
+                <div class="industry-item">
+                    <i class="fas fa-landmark"></i>
+                    <span>Government & Public Sector</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Elevate Your Brand?</h2>
+                <p>Let's create stunning promotional flags that make your business stand out and attract customers.</p>
+                <button class="btn btn-primary btn-large">Get Started Today</button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Infinity India</h3>
+                    <p>Premium flag manufacturing company committed to providing brands with visually appealing, durable, and flexible flag products.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About</a></li>
+                        <!-- <li><a href="#products">Products</a></li> -->
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                      <li><a href="feather-flag.html">Feather Flag</a></li>
+                      <li><a href="teardrop-flag.html">Teardrop Flag</a></li>
+                      <li><a href="promotional-flag.html">Promotion Flag</a></li>
+                      <li><a href="printed-flag.html">Printed Flag</a></li>
+                      <li><a href="beach-flag.html">Beach Flag</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Call: +919319675133</p>
+                    <p>Call: +919821593988</p>
+                    <p>Email: indiainfinity70@gmail.com</p>
+                    <p>Address: D-9 Azad Colony Budh Vihar Phase 2, D Samta Public School, New Delhi-110085, India</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+<p>&copy; 2025 Infinity India. All rights reserved. Designed and Managed by
+   <a href="https://promopact.in" style="color: inherit; text-decoration: none;">Promopact Marketing PVT. LTD.</a>
+</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+<!-- <script src="unveil-carousel.js"></script> -->
+<!-- Modal Structure for Feather Flag -->
+<!-- <div id="featherFlagModal" class="modal">
+  <div class="modal-content" style="display: flex; gap: 2rem; flex-wrap: wrap;">
+    <span class="modal-close">&times;</span>
+    <div style="flex: 1; min-width: 300px;">
+      <img src="img/IMG-20250716-WA0006.jpg" alt="Feather Flags" style="width: 100%; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+      <div style="display: flex; justify-content: space-around; margin-top: 1rem; font-weight: bold;">
+        <span>8 FT</span>
+        <span>10 FT</span>
+        <span>12 FT</span>
+      </div>
+    </div>
+    <div style="flex: 1; min-width: 300px;">
+      <h2>Feather Flag Details</h2>
+      <p>Elevate your brand visibility with Feather Flags by Infinity India. Designed to capture attention with their dynamic and eye-catching appearance, these feather flags are perfect for outdoor events, trade shows, retail promotions, and more.</p>
+      <p>Our feather flags are made with premium materials ensuring durability and vibrant colors that last. Easy to set up and transport, they are an excellent choice for any promotional campaign.</p>
+    </div>
+  </div>
+</div> -->
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
+  const dropdownMenu = document.getElementById('dropdownMenu');
+
+  // Hamburger toggle
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    dropdownMenu.classList.remove('show-dropdown'); // close dropdown if open
+  });
+
+  // Dropdown toggle
+  dropdownToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdownMenu.classList.toggle('show-dropdown');
+  });
+
+  // Close dropdown on outside click
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.dropdown')) {
+      dropdownMenu.classList.remove('show-dropdown');
+    }
+  });
+
+</script>
+
+
+</body>
+</html>
+

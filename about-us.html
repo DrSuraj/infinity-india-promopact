@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity India - Premium Flag Manufacturing</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+   
+  <header class="navbar">
+    <div class="logo">
+      <img src="img/logo.avif" alt="Eureka Logo" />
+      <!-- <h1>Eureka Polychem PVT LTD</h1> -->
+    </div>
+  
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about-us.html">About</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Products &#9662;</a> 
+        <ul class="dropdown-menu" id="dropdownMenu">
+          <li><a href="feather-flag.html">Feather Flag</a></li>
+          <li><a href="teardrop-flag.html">Teardrop Flag</a></li>
+          <li><a href="promotional-flag.html">Promotion Flag</a></li>
+          <li><a href="printed-flag.html">Printed Flag</a></li>
+          <li><a href="beach-flag.html">Beach Flag</a></li>
+        
+        </ul>
+      </li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact-us.html">Contact</a></li>
+    </ul>
+  </header>
+
+
+
+<style>
+        /* About Page Specific Styles */
+        .about-page {
+            /* padding-top: 80px; */
+            background: #f9f9f9;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .about-hero {
+            background: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 0.8)), url('img/17.avif');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+        }
+        
+        .about-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        
+        .about-hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .about-main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .about-section {
+            background: white;
+            border-radius: 15px;
+            /* box-shadow: 0 5px 15px rgba(0,0,0,0.1); */
+            padding: 3rem;
+            margin-bottom: 3rem;
+            border: 1px solid #eee;
+        }
+        
+        .about-section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .about-section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(135deg, #B8860B, #D4AF37);
+        }
+        
+        .about-content {
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        
+        .about-mission, .about-vision {
+            background: rgba(184, 134, 11, 0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #B8860B;
+        }
+        
+        .about-mission h3, .about-vision h3 {
+            font-size: 1.5rem;
+            color: #B8860B;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .about-values {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .about-value {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .about-value-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(184, 134, 11, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #B8860B;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .about-value-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .about-team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+    
+        
+        .about-team-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+            border: 3px solid #B8860B;
+        }
+        
+       
+        
+        
+        .about-cta {
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(135deg, #1a1a1a, #404040);
+            color: white;
+            border-radius: 15px;
+        }
+        
+        .about-cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .about-cta p {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .about-cta-btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #B8860B, #D4AF37);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(184, 134, 11, 0.3);
+        }
+        
+        .about-cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(184, 134, 11, 0.4);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .about-mission-vision {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .about-hero {
+                padding: 4rem 1rem;
+            }
+            
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .about-main {
+                padding: 1rem;
+            }
+            
+            .about-section {
+                padding: 2rem 1.5rem;
+            }
+            
+            .about-section-title {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .about-section-title {
+                font-size: 1.5rem;
+            }
+            
+            .about-cta {
+                padding: 2rem 1rem;
+            }
+            
+            .about-cta h2 {
+                font-size: 1.5rem;
+            }
+        }
+</style>
+
+
+    <div class="about-page">
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <h1>Our Story</h1>
+            <p>From humble beginnings to becoming a trusted name in flag manufacturing, Infinity India has been helping brands make their mark since 2015.</p>
+        </section>
+
+        <!-- Main Content -->
+        <main class="about-main">
+            <!-- About Us Section -->
+            <section class="about-section">
+                <h2 class="about-section-title">About Infinity India</h2>
+                <div class="about-content">
+                    <p>Founded in 2015, Infinity India began as a small workshop with a big vision - to revolutionize the flag manufacturing industry in India. What started as a passion project has now grown into a respected brand known for quality, innovation, and exceptional customer service.</p>
+                    
+                    <p>Today, we specialize in manufacturing premium promotional flags including feather flags, teardrop flags, beach flags, and custom printed flags. Our products are used by businesses across India and internationally for trade shows, retail promotions, events, and corporate branding.</p>
+                    
+                    <p>What sets us apart is our commitment to using only the highest quality materials and state-of-the-art printing technology. Each flag is crafted with precision and attention to detail, ensuring your brand makes the perfect impression every time.</p>
+                </div>
+            </section>
+            
+            <!-- Mission & Vision Section -->
+            <section class="about-section">
+                <h2 class="about-section-title">Our Mission & Vision</h2>
+                <div class="about-mission-vision">
+                    <div class="about-mission">
+                        <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                        <p>To provide businesses with innovative, high-quality promotional flags that enhance brand visibility and create lasting impressions. We strive to combine traditional craftsmanship with modern technology to deliver products that exceed expectations.</p>
+                    </div>
+                    <div class="about-vision">
+                        <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                        <p>To become India's most trusted flag manufacturer and a global leader in promotional branding solutions. We aim to continuously innovate and set new standards in quality and customer service in the flag manufacturing industry.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Values Section -->
+            <section class="about-section">
+                <h2 class="about-section-title">Our Core Values</h2>
+                <div class="about-values">
+                    <div class="about-value">
+                        <div class="about-value-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="about-value-content">
+                            <h3>Quality</h3>
+                            <p>We never compromise on materials or craftsmanship, ensuring every flag meets our high standards.</p>
+                        </div>
+                    </div>
+                    <div class="about-value">
+                        <div class="about-value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="about-value-content">
+                            <h3>Innovation</h3>
+                            <p>We continuously explore new techniques and materials to improve our products.</p>
+                        </div>
+                    </div>
+                    <div class="about-value">
+                        <div class="about-value-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <div class="about-value-content">
+                            <h3>Customer Focus</h3>
+                            <p>Your satisfaction is our priority. We listen, understand, and deliver exactly what you need.</p>
+                        </div>
+                    </div>
+                    <div class="about-value">
+                        <div class="about-value-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="about-value-content">
+                            <h3>Integrity</h3>
+                            <p>We conduct business with honesty, transparency, and respect for all stakeholders.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- CTA Section -->
+            <section class="about-cta">
+                <h2>Ready to Elevate Your Brand?</h2>
+                <p>Discover how our premium flags can help your business stand out and attract more customers.</p>
+                <a href="contact.html" class="about-cta-btn">
+                    <i class="fas fa-phone-alt"></i> Contact Us Today
+                </a>
+            </section>
+        </main>
+    </div>
+
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Infinity India</h3>
+                    <p>Premium flag manufacturing company committed to providing brands with visually appealing, durable, and flexible flag products.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About</a></li>
+                        <!-- <li><a href="#products">Products</a></li> -->
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                      <li><a href="feather-flag.html">Feather Flag</a></li>
+                      <li><a href="teardrop-flag.html">Teardrop Flag</a></li>
+                      <li><a href="promotional-flag.html">Promotion Flag</a></li>
+                      <li><a href="printed-flag.html">Printed Flag</a></li>
+                      <li><a href="beach-flag.html">Beach Flag</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Call: +919319675133</p>
+                    <p>Call: +919821593988</p>
+                    <p>Email: indiainfinity70@gmail.com</p>
+                    <p>Address: D-9 Azad Colony Budh Vihar Phase 2, D Samta Public School, New Delhi-110085, India</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+<p>&copy; 2025 Infinity India. All rights reserved. Designed and Managed by
+   <a href="https://promopact.in" style="color: inherit; text-decoration: none;">Promopact Marketing PVT. LTD.</a>
+</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+<!-- <script src="unveil-carousel.js"></script> -->
+<!-- Modal Structure for Feather Flag -->
+<!-- <div id="featherFlagModal" class="modal">
+  <div class="modal-content" style="display: flex; gap: 2rem; flex-wrap: wrap;">
+    <span class="modal-close">&times;</span>
+    <div style="flex: 1; min-width: 300px;">
+      <img src="img/IMG-20250716-WA0006.jpg" alt="Feather Flags" style="width: 100%; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+      <div style="display: flex; justify-content: space-around; margin-top: 1rem; font-weight: bold;">
+        <span>8 FT</span>
+        <span>10 FT</span>
+        <span>12 FT</span>
+      </div>
+    </div>
+    <div style="flex: 1; min-width: 300px;">
+      <h2>Feather Flag Details</h2>
+      <p>Elevate your brand visibility with Feather Flags by Infinity India. Designed to capture attention with their dynamic and eye-catching appearance, these feather flags are perfect for outdoor events, trade shows, retail promotions, and more.</p>
+      <p>Our feather flags are made with premium materials ensuring durability and vibrant colors that last. Easy to set up and transport, they are an excellent choice for any promotional campaign.</p>
+    </div>
+  </div>
+</div> -->
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
+  const dropdownMenu = document.getElementById('dropdownMenu');
+
+  // Hamburger toggle
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    dropdownMenu.classList.remove('show-dropdown'); // close dropdown if open
+  });
+
+  // Dropdown toggle
+  dropdownToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdownMenu.classList.toggle('show-dropdown');
+  });
+
+  // Close dropdown on outside click
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.dropdown')) {
+      dropdownMenu.classList.remove('show-dropdown');
+    }
+  });
+
+</script>
+
+
+</body>
+</html>
+

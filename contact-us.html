@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity India - Premium Flag Manufacturing</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+   
+  <header class="navbar">
+    <div class="logo">
+      <img src="img/logo.avif" alt="Eureka Logo" />
+      <!-- <h1>Eureka Polychem PVT LTD</h1> -->
+    </div>
+  
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about-us.html">About</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Products &#9662;</a> 
+        <ul class="dropdown-menu" id="dropdownMenu">
+          <li><a href="feather-flag.html">Feather Flag</a></li>
+          <li><a href="teardrop-flag.html">Teardrop Flag</a></li>
+          <li><a href="promotional-flag.html">Promotion Flag</a></li>
+          <li><a href="printed-flag.html">Printed Flag</a></li>
+          <li><a href="beach-flag.html">Beach Flag</a></li>
+        
+        </ul>
+      </li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact-us.html">Contact</a></li>
+    </ul>
+  </header>
+
+
+
+<style>
+        /* Contact Page Specific Styles */
+        .contact-page {
+            /* padding-top: 80px; */
+            background: #f9f9f9;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .contact-hero {
+            background: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 0.8)), url('img/17.avif');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+        }
+        
+        .contact-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .contact-main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .contact-section {
+            background: white;
+            border-radius: 15px;
+            /* box-shadow: 0 5px 15px rgba(0,0,0,0.1); */
+            padding: 3rem;
+            margin-bottom: 3rem;
+            border: 1px solid #eee;
+        }
+        
+        .contact-section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .contact-section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(135deg, #B8860B, #D4AF37);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .contact-card {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(184, 134, 11, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #B8860B;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-card-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+        
+        .contact-card-content p, 
+        .contact-card-content a {
+            color: #555;
+            line-height: 1.6;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-card-content a:hover {
+            color: #B8860B;
+        }
+        
+        .contact-form .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            outline: none;
+            border-color: #B8860B;
+        }
+        
+        .contact-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #B8860B, #D4AF37);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(184, 134, 11, 0.3);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(184, 134, 11, 0.4);
+        }
+        
+        .contact-map {
+            height: 400px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+        
+        .contact-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                order: 2;
+            }
+            
+            .contact-form {
+                order: 1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .contact-hero {
+                padding: 4rem 1rem;
+            }
+            
+            .contact-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .contact-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .contact-main {
+                padding: 1rem;
+            }
+            
+            .contact-section {
+                padding: 2rem 1.5rem;
+            }
+            
+            .contact-section-title {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .contact-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-section-title {
+                font-size: 1.5rem;
+            }
+            
+            .contact-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+</style>
+
+<div class="contact-page">
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <h1>Get In Touch</h1>
+            <p>We'd love to hear from you! Whether you have questions about our products or need a custom quote, our team is ready to assist you.</p>
+        </section>
+
+        <!-- Main Content -->
+        <main class="contact-main">
+            <!-- Contact Section -->
+            <section class="contact-section">
+                <h2 class="contact-section-title">Contact Us</h2>
+                <div class="contact-container">
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h3>Our Location</h3>
+                                <p>D-9 Azad Colony Budh Vihar Phase 2, D Samta Public School, New Delhi-110085, India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h3>Phone</h3>
+                                <p>
+                                    <a href="tel:+911234567890">+91 9319675133</a><br>
+                                    <a href="tel:+911234567891">+91 9821593988</a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h3>Email</h3>
+                                <p>
+                                    <a href="mailto:indiainfinity70@gmail.com">indiainfinity70@gmail.com</a><br>
+                                    <!-- <a href="mailto:sales@infinityindia.com">sales@infinityindia.com</a> -->
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h3>Business Hours</h3>
+                                <p>
+                                    Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                    Saturday: 10:00 AM - 4:00 PM<br>
+                                    Sunday: Closed
+                                </p>
+                            </div>
+                        </div> -->
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject">
+                                    <option value="">Select a subject</option>
+                                    <option value="quote">Request a Quote</option>
+                                    <option value="product">Product Inquiry</option>
+                                    <option value="custom">Custom Order</option>
+                                    <option value="support">Customer Support</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Map Section -->
+                <div class="contact-map">
+<iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.382785730995!2d77.08504517527437!3d28.71622107564861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d01b12c06310d%3A0xc714a54c557747f6!2sInfinity%20India!5e0!3m2!1sen!2sin!4v1722218658004!5m2!1sen!2sin" 
+  width="100%" 
+  height="450" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+                </div>
+            </section>
+            
+            <!-- CTA Section -->
+            <!-- <section class="about-cta">
+                <h2>Looking for Custom Flag Solutions?</h2>
+                <p>Our team of experts can help you design and manufacture the perfect flags for your brand or event.</p>
+                <a href="#" class="about-cta-btn">
+                    <i class="fas fa-flag"></i> Request a Quote
+                </a>
+            </section> -->
+        </main>
+    </div>
+
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Infinity India</h3>
+                    <p>Premium flag manufacturing company committed to providing brands with visually appealing, durable, and flexible flag products.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About</a></li>
+                        <!-- <li><a href="#products">Products</a></li> -->
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                      <li><a href="feather-flag.html">Feather Flag</a></li>
+                      <li><a href="teardrop-flag.html">Teardrop Flag</a></li>
+                      <li><a href="promotional-flag.html">Promotion Flag</a></li>
+                      <li><a href="printed-flag.html">Printed Flag</a></li>
+                      <li><a href="beach-flag.html">Beach Flag</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Call: +919319675133</p>
+                    <p>Call: +919821593988</p>
+                    <p>Email: indiainfinity70@gmail.com</p>
+                    <p>Address: D-9 Azad Colony Budh Vihar Phase 2, D Samta Public School, New Delhi-110085, India</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+<p>&copy; 2025 Infinity India. All rights reserved. Designed and Managed by
+   <a href="https://promopact.in" style="color: inherit; text-decoration: none;">Promopact Marketing PVT. LTD.</a>
+</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+<!-- <script src="unveil-carousel.js"></script> -->
+<!-- Modal Structure for Feather Flag -->
+<!-- <div id="featherFlagModal" class="modal">
+  <div class="modal-content" style="display: flex; gap: 2rem; flex-wrap: wrap;">
+    <span class="modal-close">&times;</span>
+    <div style="flex: 1; min-width: 300px;">
+      <img src="img/IMG-20250716-WA0006.jpg" alt="Feather Flags" style="width: 100%; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+      <div style="display: flex; justify-content: space-around; margin-top: 1rem; font-weight: bold;">
+        <span>8 FT</span>
+        <span>10 FT</span>
+        <span>12 FT</span>
+      </div>
+    </div>
+    <div style="flex: 1; min-width: 300px;">
+      <h2>Feather Flag Details</h2>
+      <p>Elevate your brand visibility with Feather Flags by Infinity India. Designed to capture attention with their dynamic and eye-catching appearance, these feather flags are perfect for outdoor events, trade shows, retail promotions, and more.</p>
+      <p>Our feather flags are made with premium materials ensuring durability and vibrant colors that last. Easy to set up and transport, they are an excellent choice for any promotional campaign.</p>
+    </div>
+  </div>
+</div> -->
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
+  const dropdownMenu = document.getElementById('dropdownMenu');
+
+  // Hamburger toggle
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    dropdownMenu.classList.remove('show-dropdown'); // close dropdown if open
+  });
+
+  // Dropdown toggle
+  dropdownToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdownMenu.classList.toggle('show-dropdown');
+  });
+
+  // Close dropdown on outside click
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.dropdown')) {
+      dropdownMenu.classList.remove('show-dropdown');
+    }
+  });
+
+</script>
+
+
+</body>
+</html>
